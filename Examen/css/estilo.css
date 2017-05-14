@@ -1,0 +1,317 @@
+@charset "utf-8";
+
+body{
+	margin:0;
+	padding:0;
+	font-family: Dancing Script;
+
+}
+
+
+/*************CLASES*******/
+.contenedor{
+	width:900px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin: auto;
+}
+
+.encabezado,.cuerpo,.abajo,.pie{
+	margin: auto;
+	width: 100%;
+}
+
+.encabezado{
+	background-color: #5b7989;
+	min-height: 65px;
+	font-family: Dancing Script;
+	color: white;
+	padding-top:2vh;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+
+}
+
+.cuerpo{
+	background-color:#82c3a6;
+	height: 300px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.abajo{
+	background-color:#d5c75f;
+	min-height: 200px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+
+}
+
+.pie{
+	background-color: #C6d5c5;
+	height: 180px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+/*PERSONALIZACION DE ENCABEZADO*/
+nav{
+	float: right;
+	padding-right: 3vh;
+	padding-top: 2vh;
+}
+nav > a{
+	padding:5px;
+	text-decoration: none;
+	font-family: Dancing Script;
+	color: white;
+}
+
+.encabezado h1{
+	font-size:5vh;
+	display: inline;
+	padding-left: 2vh;
+	-webkit-filter:drop-shadow(1px 2px 3px #02010a);
+	filter: drop-shadow(1px 2px 3px #02010a);
+}
+
+/*PERSONALIZACION DE CUERPO*/
+
+
+.cuerpo>img[src$='jpg']{
+	width: 70%;
+	height: 90%;
+	filter:drop-shadow(3px 4px 5px  #02010a);
+}
+
+/*PERSONALIZACION DE ABAJO*/
+#abajo1{
+	width: 50%;
+	padding-left: 20px;
+	padding-top: 20px;
+	text-align: center;
+}
+
+#abajo1>img{
+	transition: transform 2s;
+}
+#abajo1>img:hover{
+transform: rotate(10deg);
+}
+
+#abajo1>img[src$='jpg']{
+	width: 80%;
+	height: 80%;
+	border: 2px solid black;
+	-webkit-filter: drop-shadow(5px 6px 7px #82c3a6 );
+	filter: drop-shadow(5px 6px 7px #82c3a6 );
+}
+
+@-webkit-keyframes trasladar {
+
+	0%{
+		position: relative;
+		transform: translateY(-5px);
+	}
+
+	25%{
+		position: relative;
+		transform: translateX(20px);
+	}
+
+	50%{
+		position: relative;
+		transform: translateX(-20px);
+	}
+
+	100%{
+		position: relative;
+		transform: translateY(5px);
+	}
+}
+
+#abajo2>img:hover{
+	animation: trasladar 2s;
+}
+
+#abajo2{
+	width: 50%;
+	padding-left: 20px;
+	padding-top: 20px;
+	text-align: center;
+}
+
+#abajo2>img[src$='jpg']{
+	width: 80%;
+	height: 80%;
+	border: 2px solid black;
+	-webkit-filter: drop-shadow(5px 6px 7px #82c3a6 );
+	filter: drop-shadow(5px 6px 7px #82c3a6 );
+}
+
+
+
+
+/****PIE DE PAGINA****/
+
+#contacto,#terminos,#redes_Sociales,#derechos{
+	width: 25%;
+}
+
+#contacto > ul>li{
+	list-style: none;
+	padding-bottom: 2vh;
+}
+
+#contacto>ul>li:nth-child(1){
+	font-size: 5vh;
+
+}
+
+#terminos > ul>li{
+	list-style: none;
+	padding-bottom: 2vh;
+}
+
+#terminos>ul>li:nth-child(1){
+	font-size: 5vh;
+
+}
+
+
+#redes_Sociales > ul>li{
+	list-style: none;
+	padding-bottom: 2vh;
+}
+
+#redes_Sociales>ul>li:nth-child(1){
+	font-size: 5vh;
+
+}
+
+#redes_Sociales>ul>li:nth-child(2)>img[src$='ico']{
+	width: 10%;
+	padding-right: 3px;
+}
+
+#redes_Sociales>ul>li:nth-child(3)>img[src$='png']{
+	width: 10%;
+	padding-right: 3px;
+}
+
+#redes_Sociales>ul>li:nth-child(4)>img[src$='png']{
+	width: 10%;
+	padding-right: 3px;
+}
+
+
+#derechos{
+	padding-right: 4px;
+}
+#derechos > ul>li{
+	list-style: none;
+	padding-bottom: 2vh;
+}
+
+#derechos>ul>li:nth-child(1){
+	font-size: 5vh;
+
+}
+
+
+
+/********PATRON DE DISEÑO***********/
+
+
+
+@media all and (max-width:900px) and (min-width:200px)
+{
+
+.contenedor{
+	width:100%;
+}
+
+.encabezado{
+	width: 100%;
+	text-align: center;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+.cuerpo{
+	width: 100%;
+	text-align: center;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+.abajo{
+	width: 100%;
+	text-align: center;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+.pie{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+/*Personalizacio de encabezado*/
+.encabezado>h1{
+	width: 100%;
+	height: 50%;
+}
+
+.encabezado>nav{
+	width: 100%;
+	height: 50%;
+}
+
+/*Personalizacion de cuerpo*/
+
+.cuerpo >img{
+	width: 80%;
+	height: 90%;
+}
+
+/*Personalizacion de abajo*/
+#abajo1{
+	width: 100%;
+	height: 50%;
+}
+
+#abajo2{
+	width: 100%;
+	height: 50%;
+}
+
+/*Personalizacion de pie*/
+#contacto{
+	width: 100%;
+	order: 1;
+}
+
+#terminos{
+	width: 100%;
+	order: 2;
+}
+
+#redes_Sociales{
+	width: 100%;
+	order: 3;
+}
+
+#derechos{
+	width: 100%;
+	order: 4;
+}
+
+}
